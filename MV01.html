@@ -15,6 +15,28 @@
         
         body {
             scroll-behavior: smooth;
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        .video-background {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .video-background iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 177.78vh;
+            height: 100vh;
+            min-width: 100vw;
+            min-height: 56.25vw;
+            transform: translate(-50%, -50%);
+            border: 0;
+            pointer-events: none;
         }
 
         /* 液態玻璃 (Liquid Glass) 特效 */
@@ -86,12 +108,11 @@
     <!-- 第一屏：滿版沈浸式主視覺區 -->
     <section class="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden">
         
-        <!-- 更新後的：滿版重複播放背景影片 (autoplay, loop, muted, playsinline 確保自動播放) -->
-        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="https://i.urusai.cc/Ic3Xn.mp4" type="video/mp4">
-            您的瀏覽器不支援影片標籤。
-        </video>
-        
+        <!-- 滿版重複播放 YouTube 背景影片 -->
+        <div class="video-background">
+            <iframe src="https://www.youtube.com/embed/i-gmUH_d_8w?autoplay=1&mute=1&loop=1&playlist=i-gmUH_d_8w&controls=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="背景影片"></iframe>
+        </div>
+
         <!-- 漸層暗化遮罩，確保文字與液態玻璃的對比度 -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black z-10"></div>
 
