@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LI AN PEI | Personal Infographic</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons for elegant iconography -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        en: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        surface: {
+                            light: '#ffffff',
+                            muted: '#f8fafc',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f4f7f9; /* 極淺灰藍底色 */
+            color: #1e293b; /* 深灰文字 */
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* 科技感背景網格 */
+        .tech-grid {
+            background-image: 
+                linear-gradient(to right, rgba(14, 165, 233, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* 明亮版玻璃質感 (Frosted Glass) */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 1);
+            box-shadow: 0 10px 40px -10px rgba(14, 165, 233, 0.08), 0 1px 3px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-panel:hover {
+            box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15), 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        /* 漸層文字 */
+        .text-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .text-gradient-accent {
+            background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 滾動條樣式 */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+
+        /* 頭像裝飾線條 */
+        .avatar-container::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #0ea5e9;
+            border-radius: inherit;
+            z-index: 0;
+            opacity: 0.2;
+            transition: transform 0.3s ease;
+        }
+        .avatar-container:hover::after {
+            transform: translate(5px, 5px);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- 沈浸式動態背景 (明亮科技版) -->
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none tech-grid">
+        <!-- 柔和的光暈點綴 -->
+        <div class="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-sky-200/40 rounded-full mix-blend-multiply filter blur-[100px] animate-float"></div>
+        <div class="absolute bottom-[-20%] right-[-10%] w-[40vw] h-[40vw] bg-blue-100/50 rounded-full mix-blend-multiply filter blur-[120px] animate-float" style="animation-delay: -3s;"></div>
+    </div>
+
+    <!-- 懸浮導覽 -->
+    <nav class="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center pointer-events-none">
+        <div class="glass-panel px-5 py-2 rounded-full pointer-events-auto flex items-center gap-2 cursor-pointer hover:bg-white transition-colors">
+            <i class="ph ph-arrow-left text-lg text-slate-600"></i>
+            <span class="text-sm tracking-widest font-medium text-slate-700">BACK</span>
+        </div>
+        <div class="glass-panel px-5 py-2 rounded-full pointer-events-auto hidden md:block">
+            <span class="text-sm tracking-widest font-en text-brand-600 font-medium">PORTFOLIO.2026</span>
+        </div>
+    </nav>
+
+    <!-- 核心內容區 (資訊圖卡) -->
+    <main class="relative z-10 min-h-screen w-full flex items-center justify-center p-4 sm:p-8 pt-24 pb-24">
+        <div class="w-full max-w-7xl glass-panel rounded-[2rem] p-6 sm:p-12 flex flex-col xl:flex-row gap-12 lg:gap-16 relative overflow-hidden">
+            
+            <!-- 裝飾性科技角標 -->
+            <div class="absolute top-0 right-0 w-24 h-24 border-t-4 border-r-4 border-brand-100 rounded-tr-[2rem] opacity-50"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 border-b-4 border-l-4 border-brand-100 rounded-bl-[2rem] opacity-50"></div>
+
+            <!-- 左側：人物形象與核心定位 (35%) -->
+            <div class="w-full xl:w-[35%] flex flex-col items-center xl:items-start text-center xl:text-left relative z-10">
+                <!-- 照片/影片 -->
+                <div class="relative w-56 h-72 sm:w-64 sm:h-80 rounded-2xl avatar-container mb-8">
+                    <video src="https://i.urusai.cc/3BPgE.mp4" autoplay loop muted playsinline class="w-full h-full object-cover rounded-2xl z-10 relative shadow-lg"></video>
+                </div>
+
+                <!-- 姓名與定位 -->
+                <h1 class="font-en text-4xl sm:text-5xl font-bold tracking-tight mb-2 text-slate-800">LI AN PEI</h1>
+                <p class="text-brand-600 font-medium tracking-widest text-sm mb-6 uppercase flex items-center gap-2 justify-center xl:justify-start">
+                    <i class="ph-fill ph-check-circle text-brand-500"></i>
+                    Lead QA Engineer & Project Supervisor
+                </p>
+
+                <!-- 破冰引言 -->
+                <div class="bg-white/60 p-5 rounded-xl border-l-4 border-l-brand-500 mb-8 relative overflow-hidden group shadow-sm">
+                    <i class="ph-fill ph-quotes text-3xl text-brand-100 absolute top-2 right-4"></i>
+                    <p class="text-slate-600 leading-relaxed text-sm relative z-10 font-medium">
+                        「具備20年公共基建與軌道機電品質管理經驗。在法規嚴苛的環境中，運用風險管理框架建立高效內部控制機制，確保專案從設計、施工到交付皆符合高標準要求。」
+                    </p>
+                </div>
+
+                <!-- 聯絡方式快速圖卡 -->
+                <div class="flex flex-wrap gap-3 justify-center xl:justify-start w-full">
+                    <a href="mailto:ampere1069@gmail.com" class="bg-white border border-slate-100 shadow-sm flex-1 min-w-[120px] py-3 rounded-xl flex flex-col items-center justify-center gap-1 hover:border-brand-300 hover:shadow-md transition-all group">
+                        <i class="ph ph-envelope-simple text-xl text-slate-400 group-hover:text-brand-500 transition-colors"></i>
+                        <span class="text-xs text-slate-500 font-medium font-en">Email</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lianpei640709" target="_blank" class="bg-white border border-slate-100 shadow-sm flex-1 min-w-[120px] py-3 rounded-xl flex flex-col items-center justify-center gap-1 hover:border-brand-300 hover:shadow-md transition-all group">
+                        <i class="ph ph-linkedin-logo text-xl text-slate-400 group-hover:text-brand-500 transition-colors"></i>
+                        <span class="text-xs text-slate-500 font-medium font-en">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 右側：資訊圖表與歷程 (65%) -->
+            <div class="w-full xl:w-[65%] flex flex-col gap-10 relative z-10">
+                
+                <!-- 數據化亮點 (Highlight Metrics) -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white/80 border border-slate-100 shadow-sm p-5 rounded-2xl flex flex-col justify-center items-center text-center">
+                        <span class="text-3xl font-en font-bold text-brand-600 mb-1">20+</span>
+                        <span class="text-xs text-slate-500 font-medium tracking-wide">年機電與基建經驗</span>
+                    </div>
+                    <div class="bg-white/80 border border-slate-100 shadow-sm p-5 rounded-2xl flex flex-col justify-center items-center text-center">
+                        <span class="text-3xl font-en font-bold text-brand-600 mb-1">100%</span>
+                        <span class="text-xs text-slate-500 font-medium tracking-wide">AFC系統驗收合格率</span>
+                    </div>
+                    <div class="bg-white/80 border border-slate-100 shadow-sm p-5 rounded-2xl flex flex-col justify-center items-center text-center">
+                        <span class="text-3xl font-en font-bold text-brand-600 mb-1">上億元</span>
+                        <span class="text-xs text-slate-500 font-medium tracking-wide">規避EOT索賠風險</span>
+                    </div>
+                    <div class="bg-white/80 border border-slate-100 shadow-sm p-5 rounded-2xl flex flex-col justify-center items-center text-center">
+                        <span class="text-3xl font-en font-bold text-brand-600 mb-1">120萬</span>
+                        <span class="text-xs text-slate-500 font-medium tracking-wide">優化專案預算節省</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- 核心能力圖卡 -->
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="p-2 bg-brand-50 rounded-lg">
+                                <i class="ph-fill ph-crosshair text-brand-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-800 tracking-wider">核心作戰能力</h3>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <!-- 技能條 1 -->
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-slate-700 font-medium">品質保證與系統建置 (QA/QC)</span>
+                                    <span class="text-brand-600 font-en font-semibold">95%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-brand-500 h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <!-- 技能條 2 -->
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-slate-700 font-medium">合約風險與內部控制 (ISO 31010)</span>
+                                    <span class="text-brand-600 font-en font-semibold">92%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-brand-500 h-2 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <!-- 技能條 3 -->
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-slate-700 font-medium">專案生命週期管理 (PMP)</span>
+                                    <span class="text-brand-600 font-en font-semibold">90%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-brand-500 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <!-- 技能條 4 -->
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-slate-700 font-medium">異常防堵與問題解決 (8D/NCR)</span>
+                                    <span class="text-brand-600 font-en font-semibold">88%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-brand-500 h-2 rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 關鍵字標籤 -->
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="px-3 py-1 bg-white border border-slate-200 shadow-sm rounded-full text-xs text-slate-600 font-medium">PMP® 國際專案管理師</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 shadow-sm rounded-full text-xs text-slate-600 font-medium">ISO 9001 主導稽核員</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 shadow-sm rounded-full text-xs text-slate-600 font-medium">公共工程品質管理人員</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 shadow-sm rounded-full text-xs text-slate-600 font-medium">營造業工地主任</span>
+                        </div>
+                    </div>
+
+                    <!-- 專業歷程 (Timeline) -->
+                    <div class="flex flex-col gap-5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="p-2 bg-brand-50 rounded-lg">
+                                <i class="ph-fill ph-path text-brand-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-800 tracking-wider">實戰歷程</h3>
+                        </div>
+
+                        <div class="relative border-l-2 border-brand-100 ml-4 space-y-8 pb-2">
+                            <!-- 經歷 1 -->
+                            <div class="relative pl-6">
+                                <div class="absolute w-4 h-4 bg-white border-4 border-brand-500 rounded-full -left-[9px] top-0 shadow-sm"></div>
+                                <div class="font-en text-xs text-brand-600 font-bold tracking-wider mb-1">2013/05 - PRESENT</div>
+                                <h4 class="text-sm font-bold text-slate-800 mb-1.5">台灣新鈳電子 (STE) <span class="text-xs font-normal text-slate-500 ml-1">| 資深品管工程師暨專案監督</span></h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                                    主導捷運機電(三鶯線/中捷綠線/信義松山線)品質保證。建立PMIS系統與合約健康度檢查，成功為上億元之工期展延(EOT)索賠提供堅實數據，並優化預算省下120萬元。
+                                </p>
+                            </div>
+                            <!-- 經歷 2 -->
+                            <div class="relative pl-6">
+                                <div class="absolute w-3 h-3 bg-slate-300 rounded-full -left-[7px] top-1"></div>
+                                <div class="font-en text-xs text-slate-500 font-semibold tracking-wider mb-1">2007/05 - 2013/04</div>
+                                <h4 class="text-sm font-bold text-slate-700 mb-1.5">中鼎工程股份有限公司 <span class="text-xs font-normal text-slate-500 ml-1">| 監造工程師</span></h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                                    負責大型污水下水道系統現場監造與品質查核。強化現場安衛環保稽查，導入工程控制手法優化施工安全。
+                                </p>
+                            </div>
+                            <!-- 經歷 3 -->
+                            <div class="relative pl-6">
+                                <div class="absolute w-3 h-3 bg-slate-300 rounded-full -left-[7px] top-1"></div>
+                                <div class="font-en text-xs text-slate-500 font-semibold tracking-wider mb-1">1996 - 2001</div>
+                                <h4 class="text-sm font-bold text-slate-700 mb-1.5">國立屏東科技大學 <span class="text-xs font-normal text-slate-500 ml-1">| 環境工程研究所碩士</span></h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                                    專注於環境工程控制與技術，奠定跨領域機電與環境系統整合之學術基礎。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- 底部版權宣告 (移至主容器下方) -->
+        <div class="absolute bottom-6 left-0 w-full text-center pointer-events-none">
+            <p class="text-[10px] tracking-widest text-slate-400 font-en">
+                &copy; 2026 LI AN PEI. ALL RIGHTS RESERVED.
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>
+
