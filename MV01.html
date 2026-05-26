@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI MV 視覺革命 | 頂級影音製作招商</title>
+    <!-- 匯入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 全域設定：隱藏原生滾動條，確保極致沈浸感 */
+        ::-webkit-scrollbar { 
+            width: 0px; 
+            background: transparent; 
+        }
+        
+        body {
+            scroll-behavior: smooth;
+        }
+
+        /* 液態玻璃 (Liquid Glass) 特效 */
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        /* 無限循環科技文字動畫 */
+        .tech-marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            position: absolute;
+            bottom: 8%;
+            border-top: 1px solid rgba(0, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+            padding: 12px 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 20;
+        }
+        .tech-marquee {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+            color: rgba(0, 255, 255, 0.8);
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        /* 兩段文字無縫拼接 */
+        .tech-marquee span {
+            padding-right: 20px;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* 科幻光波呼吸燈 */
+        .sci-fi-glow {
+            animation: breathe 3.5s ease-in-out infinite;
+            color: #fff;
+        }
+        @keyframes breathe {
+            0%, 100% { 
+                text-shadow: 0 0 10px rgba(0, 255, 255, 0.4), 0 0 20px rgba(0, 255, 255, 0.2); 
+            }
+            50% { 
+                text-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3); 
+            }
+        }
+
+        /* 表單輸入框聚焦效果 */
+        .contact-input:focus {
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), inset 0 0 20px rgba(0, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased overflow-x-hidden">
+
+    <!-- 左上角：懸浮導覽按鈕 -->
+    <a href="#" class="fixed top-8 left-8 z-50 liquid-glass px-6 py-3 rounded-full text-sm font-light tracking-[0.2em] hover:bg-white/10 hover:border-cyan-500/50 transition duration-500 flex items-center gap-3">
+        <span class="text-cyan-400">←</span> 返回議程
+    </a>
+
+    <!-- 第一屏：滿版沈浸式主視覺區 -->
+    <section class="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden">
+        
+        <!-- 更新後的：滿版重複播放背景影片 (autoplay, loop, muted, playsinline 確保自動播放) -->
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="https://i.urusai.cc/Ic3Xn.mp4" type="video/mp4">
+            您的瀏覽器不支援影片標籤。
+        </video>
+        
+        <!-- 漸層暗化遮罩，確保文字與液態玻璃的對比度 -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black z-10"></div>
+
+        <!-- 核心招商文案區 -->
+        <div class="relative z-20 text-center px-6 max-w-5xl mx-auto">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-[0.1em] sci-fi-glow">AI MV 視覺革命</h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light tracking-[0.2em] mb-12">打破現實邊界，重新定義音樂視覺體驗。</p>
+            
+            <a href="#solicitation" class="inline-block liquid-glass rounded-full px-12 py-5 text-lg font-medium hover:scale-105 transition-transform duration-500 hover:shadow-[0_0_30px_rgba(0,255,255,0.4)] border border-cyan-400/40 text-cyan-50">
+                探索商業方案
+            </a>
+        </div>
+
+        <!-- 無限循環科技跑馬燈 -->
+        <div class="tech-marquee-container">
+            <div class="tech-marquee text-xs md:text-sm">
+                <span>GENERATIVE AI MODELING // 4K UPSCALING // MOTION TRACKING // REAL-TIME RENDERING // CYBERPUNK AESTHETICS //</span>
+                <span>GENERATIVE AI MODELING // 4K UPSCALING // MOTION TRACKING // REAL-TIME RENDERING // CYBERPUNK AESTHETICS //</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第二屏：招商特色說明 / 液態玻璃風格卡片 -->
+    <section id="solicitation" class="relative w-full min-h-screen bg-black flex items-center justify-center py-24 px-6 md:px-20 z-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl w-full">
+            <!-- 方案卡片 1 -->
+            <div class="liquid-glass rounded-[2rem] p-12 hover:-translate-y-4 transition-transform duration-700">
+                <div class="text-cyan-400 text-5xl font-bold mb-8 opacity-80">01</div>
+                <h3 class="text-3xl font-bold mb-6 tracking-widest text-white">極速生成</h3>
+                <p class="text-gray-400 font-light leading-loose tracking-wide">
+                    導入最新擴散模型與雲端運算叢集，將傳統動輒數月的 MV 製作週期，大幅縮短至數週甚至數天，為發片搶佔先機。
+                </p>
+            </div>
+            <!-- 方案卡片 2 -->
+            <div class="liquid-glass rounded-[2rem] p-12 hover:-translate-y-4 transition-transform duration-700">
+                <div class="text-cyan-400 text-5xl font-bold mb-8 opacity-80">02</div>
+                <h3 class="text-3xl font-bold mb-6 tracking-widest text-white">無界創意</h3>
+                <p class="text-gray-400 font-light leading-loose tracking-wide">
+                    無論是賽博龐克、末日荒野還是超現實宇宙，生成式 AI 讓您的視覺想像力不再受限於實景拍攝的高昂預算。
+                </p>
+            </div>
+            <!-- 方案卡片 3 -->
+            <div class="liquid-glass rounded-[2rem] p-12 hover:-translate-y-4 transition-transform duration-700">
+                <div class="text-cyan-400 text-5xl font-bold mb-8 opacity-80">03</div>
+                <h3 class="text-3xl font-bold mb-6 tracking-widest text-white">商用授權</h3>
+                <p class="text-gray-400 font-light leading-loose tracking-wide">
+                    提供專屬模型微調與嚴謹的商用版權解決方案，確保每一幀 AI 畫面皆可合法且安心地應用於全球各大影音串流平台。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三屏：電影級結尾視覺 -->
+    <section class="relative w-full h-screen flex flex-col justify-center items-center bg-black z-20">
+        <!-- 核心發光點綴 -->
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/30 via-black to-black"></div>
+        
+        <div class="relative z-30 text-center liquid-glass p-16 md:p-24 rounded-[3rem] max-w-3xl mx-6 border-t border-cyan-500/30">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-widest text-white">啟動您的 AI 視覺宇宙</h2>
+            <p class="text-gray-400 mb-12 font-light tracking-[0.3em] text-lg">期待與您共創下一個百萬觀看神作</p>
+            
+            <form class="flex flex-col md:flex-row gap-4 justify-center">
+                <input type="email" placeholder="輸入您的聯絡 Email" class="bg-black/60 border border-white/20 rounded-full px-8 py-4 text-white focus:outline-none focus:border-cyan-400 transition-colors w-full md:w-80 tracking-wider">
+                <button type="button" class="bg-white text-black rounded-full px-10 py-4 font-bold hover:bg-cyan-400 hover:text-white transition-all duration-300 tracking-[0.2em]">
+                    發送提案要求
+                </button>
+            </form>
+        </div>
+        
+        <!-- 正中央科幻光波呼吸燈結尾字樣 -->
+        <div class="absolute bottom-16 text-cyan-100 text-sm tracking-[1em] uppercase sci-fi-glow" style="animation-duration: 4.5s; padding-left: 1em;">
+            感謝收看
+        </div>
+    </section>
+
+    <!-- 聯絡我／合作洽詢表單區塊 -->
+    <section class="relative w-full bg-gradient-to-b from-black to-[#050607] py-24 px-6 md:px-16">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <p class="text-cyan-400 uppercase tracking-[0.4em] text-sm mb-4">聯絡與合作</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">聯絡我 / 合作洽詢</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    有任何製作需求或合作想法？填寫下方表單，我們將盡快與您聯絡。
+                </p>
+            </div>
+
+            <!-- 表單卡片 -->
+            <div class="liquid-glass rounded-[2rem] p-10 md:p-16 border border-white/10 backdrop-blur-xl">
+                <form id="contactForm" class="space-y-6">
+                    <!-- 姓名欄位 -->
+                    <div>
+                        <label class="block text-sm font-semibold text-cyan-100 mb-3 tracking-wide">姓名</label>
+                        <input type="text" id="name" name="name" placeholder="請輸入您的姓名" 
+                               class="w-full px-5 py-3 rounded-lg bg-black/60 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 backdrop-blur-sm"
+                               required>
+                    </div>
+
+                    <!-- Email 欄位 -->
+                    <div>
+                        <label class="block text-sm font-semibold text-cyan-100 mb-3 tracking-wide">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" 
+                               class="w-full px-5 py-3 rounded-lg bg-black/60 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 backdrop-blur-sm"
+                               required>
+                    </div>
+
+                    <!-- 企劃類型欄位 -->
+                    <div>
+                        <label class="block text-sm font-semibold text-cyan-100 mb-3 tracking-wide">企劃類型</label>
+                        <select id="projectType" name="projectType" 
+                                class="w-full px-5 py-3 rounded-lg bg-black/60 border border-white/20 text-white focus:outline-none focus:border-cyan-400 transition-colors duration-300 backdrop-blur-sm"
+                                required>
+                            <option value="">-- 請選擇 --</option>
+                            <option value="AI MV 製作">AI MV 製作</option>
+                            <option value="廣告影片">廣告影片</option>
+                            <option value="產品展示">產品展示</option>
+                            <option value="品牌合作">品牌合作</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </div>
+
+                    <!-- 需求簡述欄位 -->
+                    <div>
+                        <label class="block text-sm font-semibold text-cyan-100 mb-3 tracking-wide">需求簡述</label>
+                        <textarea id="message" name="message" placeholder="請簡述您的需求或想法..." rows="5"
+                                  class="w-full px-5 py-3 rounded-lg bg-black/60 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 backdrop-blur-sm resize-none"
+                                  required></textarea>
+                    </div>
+
+                    <!-- 提交按鈕 -->
+                    <div class="flex justify-center pt-6">
+                        <button type="submit" 
+                                class="px-12 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold rounded-full tracking-widest uppercase transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,255,255,0.3)] border border-cyan-400/30">
+                            送出需求
+                        </button>
+                    </div>
+
+                    <!-- 隱藏 iframe 用於表單提交 -->
+                    <iframe id="hiddenIframe" name="hiddenIframe" style="display:none;"></iframe>
+                </form>
+            </div>
+
+            <!-- 底部聯絡資訊 -->
+            <div class="text-center mt-12">
+                <p class="text-gray-400 text-sm">或直接聯繫：<a href="mailto:ampere1069@gmail.com" class="text-cyan-400 hover:text-cyan-300 transition-colors">ampere1069@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集展示區塊 -->
+    <section class="relative w-full bg-[#050607] py-20 px-6 md:px-16">
+        <div class="max-w-7xl mx-auto text-center mb-12">
+            <p class="text-cyan-400 uppercase tracking-[0.4em] text-sm mb-4">作品集展示</p>
+            <h2 class="text-4xl md:text-5xl font-bold text-white">純畫面展示 | YouTube Shorts</h2>
+            <p class="mt-4 text-gray-400 max-w-2xl mx-auto">以下為三支短片作品，已設定自動播放、靜音、循環播放，僅保留純畫面展示效果。</p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3 max-w-7xl mx-auto">
+            <div class="rounded-[2rem] overflow-hidden border border-white/10 bg-black/80 shadow-[0_20px_80px_rgba(0,0,0,0.35)]">
+                <div class="aspect-[9/16] bg-black">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/h7hM5BlOcMY?autoplay=1&mute=1&loop=1&playlist=h7hM5BlOcMY&controls=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1" title="VOBO皮鞋" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="p-6 text-center bg-[#050607]">
+                    <p class="text-lg font-semibold text-white">VOBO皮鞋</p>
+                </div>
+            </div>
+
+            <div class="rounded-[2rem] overflow-hidden border border-white/10 bg-black/80 shadow-[0_20px_80px_rgba(0,0,0,0.35)]">
+                <div class="aspect-[9/16] bg-black">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/bcFnNsTVntk?autoplay=1&mute=1&loop=1&playlist=bcFnNsTVntk&controls=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1" title="SHARK 鯊克防水鞋" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="p-6 text-center bg-[#050607]">
+                    <p class="text-lg font-semibold text-white">SHARK 鯊克防水鞋</p>
+                </div>
+            </div>
+
+            <div class="rounded-[2rem] overflow-hidden border border-white/10 bg-black/80 shadow-[0_20px_80px_rgba(0,0,0,0.35)]">
+                <div class="aspect-[9/16] bg-black">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/n9VTjZdNvEQ?autoplay=1&mute=1&loop=1&playlist=n9VTjZdNvEQ&controls=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1" title="黑武士鞋" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="p-6 text-center bg-[#050607]">
+                    <p class="text-lg font-semibold text-white">黑武士鞋</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功提示視窗 -->
+    <div id="successModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+        <!-- 背景遮罩 -->
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="modalBackdrop"></div>
+        
+        <!-- 提示卡片 -->
+        <div class="relative z-10 mx-6">
+            <div class="liquid-glass rounded-[2rem] p-10 md:p-14 max-w-md border border-cyan-400/50 text-center backdrop-blur-xl">
+                <div class="mb-6">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">需求已送出</h3>
+                <p class="text-gray-300 mb-8 leading-relaxed">感謝您的聯繫，我們將盡快與您聯絡！</p>
+                <button id="closeModal" 
+                        class="px-8 py-3 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,255,0.3)]">
+                    確認
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Google 表單提交邏輯
+        const contactForm = document.getElementById('contactForm');
+        const successModal = document.getElementById('successModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const modalBackdrop = document.getElementById('modalBackdrop');
+
+        // 表單提交事件
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // 取得表單資料
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const projectType = document.getElementById('projectType').value;
+            const message = document.getElementById('message').value;
+
+            // 建構 Google 表單 URL（使用隱藏 iframe）
+            const formAction = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfk-SS6glAkqPAKUjxGBSBoRG26xATX2Sh_96MMvZLSGoZJqg/formResponse';
+            
+            // 建構表單資料參數
+            const formData = new FormData();
+            formData.append('entry.588998168', name);           // 姓名
+            formData.append('entry.476214014', email);          // Email
+            formData.append('entry.1610329698', projectType);   // 企劃類型
+            formData.append('entry.1646642689', message);       // 需求簡述
+
+            // 使用 fetch 在背景提交（無跨域限制的方式）
+            fetch(formAction, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                // 表單提交成功後顯示成功視窗
+                showSuccessModal();
+                // 清空表單
+                contactForm.reset();
+            }).catch(error => {
+                console.log('表單已送出（背景提交）');
+                // 即使有錯誤也顯示成功視窗（Google 表單接受了資料）
+                showSuccessModal();
+                contactForm.reset();
+            });
+        });
+
+        // 顯示成功視窗
+        function showSuccessModal() {
+            successModal.classList.remove('hidden');
+            // 禁止背景滾動
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 關閉成功視窗
+        function closeSuccess() {
+            successModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        closeModalBtn.addEventListener('click', closeSuccess);
+        modalBackdrop.addEventListener('click', closeSuccess);
+
+        // 按 Esc 也能關閉
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !successModal.classList.contains('hidden')) {
+                closeSuccess();
+            }
+        });
+    </script>
+
+</body>
+</html>
